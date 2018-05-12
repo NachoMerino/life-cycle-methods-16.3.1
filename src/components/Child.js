@@ -22,7 +22,9 @@ class Child extends Component {
     console.log('prevState',prevState);
     if(nextProps.child !== prevState.props){
       console.log('I am triggered!!!')
-      // this.setState({name: 'child Updated'})
+      return {
+       newValueForState: 'I am a new value created in getDerivedStateFromProps' 
+      }
     }
     return null
   }
